@@ -1,0 +1,37 @@
+<% include partials/header %>
+
+
+<link rel="stylesheet" type="text/css" href="/style.css">
+
+
+<div class="container-fluid container1 con">
+<div class="row">
+<% homepage.forEach(function(homepage){%>
+<div class="col-lg-4 col-sm-6">
+    <
+<div class="card" style="width: auto;" "display:flex; flex-wrap: wrap;">
+  <img class="card-img-top img-responsive img-1" src="<%=homepage.image %>">
+  <div class="card-body">
+   <p class="card-text"><%=homepage.text%></p>
+  </div>
+  <div class="card text-center">
+  <div class="card-body">
+    <a href="/<%= homepage._id %>"  class="btn btn-primary">More Info</a>
+    </div>
+  </div>
+</div>
+</div>
+
+<% }); %>
+
+</div>
+</div>
+    
+
+
+
+
+
+
+
+<% include partials/footer %>

@@ -1,0 +1,35 @@
+<% include partials/header %>
+
+<div class="container-fluid procon">
+    <div class="row">
+        <div class="col-lg-10 col-md-8-auto">
+    <div class="card mb-3">
+  <img class="card-img-top" src="<%=homepage.image %>">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <div class="text-right">
+        <!--<h4 id="posttime" value="<%=homepage.time%>"><%=homepage.time%></h3>-->
+        <input id="posttime" type="hidden" value="<%=homepage.time%>">
+    </div>
+    <p class="card-text"><%=homepage.description%></p>
+     </div>
+     <div class="card text-right">
+     <div class="card-body">
+             <a href="/<%= homepage._id %>/bids"  class="btn btn-primary">Buy</a>
+             <h3 class="text-left textv">Price <%=homepage.price%></h3>
+     </div>
+     </div>
+     
+</div>
+</div>
+   </div>
+   <div>
+   <h3 style="color:white;">Time Left: <span id="demo" style="color: white"></span></h3>
+   </div>
+   
+</div>
+
+<script type="text/javascript" src="/time2.js"></script>
+
+
+<% include partials/footer %>
