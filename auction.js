@@ -132,7 +132,9 @@ app.post("/:id/bids", function(req,res){
     
 });
 
-app.listen(process.env.PORT, process.env.IP, function(){
+var port = process.env.PORT || 8080 || process.env.OPENSHIFT_NODEJS_PORT;
+var ip = process.env.IP || "127.0.0.1" || process.env.OPENSHIFT_NODEJS_IP;
+app.listen(port, ip, function(){
     console.log("Server started");
 });
 
