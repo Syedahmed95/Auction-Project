@@ -8,7 +8,8 @@ var bodyparser = require("body-parser");
 // console.log(module);
 
 
-mongoose.connect("mongodb://localhost/auction", { useNewUrlParser: true });
+// mongoose.connect("mongodb://localhost:/auction", { useNewUrlParser: true });
+mongoose.connect("mongodb+srv://Auction:model@auction-ujxcw.mongodb.net/test?retryWrites=true&w=majority")
 app.use(bodyparser.urlencoded({extended: true}));
 app.use(exp.static("public"));
 
